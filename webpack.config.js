@@ -12,6 +12,7 @@ const { CleanWebpackPlugin: CleanPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const CspHtmlPlugin = require('csp-html-webpack-plugin');
 const esbuild = require('esbuild');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const ForkTsCheckerPlugin = require('fork-ts-checker-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
@@ -59,25 +60,29 @@ function getExtensionConfig(target, mode, env) {
 		new CleanPlugin({ cleanOnceBeforeBuildPatterns: ['!webviews/**'] }),
 		new ForkTsCheckerPlugin({
 			async: false,
-			eslint: {
-				enabled: true,
-				files: 'src/**/*.ts',
-				options: {
-					cache: true,
-					cacheLocation: path.join(
-						__dirname,
-						target === 'webworker' ? '.eslintcache.browser' : '.eslintcache',
-					),
-					overrideConfigFile: path.join(
-						__dirname,
-						target === 'webworker' ? '.eslintrc.browser.json' : '.eslintrc.json',
-					),
-				},
-			},
+			// eslint: {
+			// 	enabled: true,
+			// 	files: 'src/**/*.ts',
+			// 	options: {
+			// 		overrideConfigFile: path.join(
+			// 			__dirname,
+			// 			target === 'webworker' ? '.eslintrc.browser.json' : '.eslintrc.json',
+			// 		),
+			// 	},
+			// },
 			formatter: 'basic',
 			typescript: {
 				configFile: path.join(__dirname, target === 'webworker' ? 'tsconfig.browser.json' : 'tsconfig.json'),
 			},
+		}),
+		new ESLintPlugin({
+			files: 'src/**/*.ts',
+			// lintDirtyModulesOnly: true,
+			// threads: true,
+			overrideConfigFile: path.join(
+				__dirname,
+				target === 'webworker' ? '.eslintrc.browser.json' : '.eslintrc.json',
+			),
 		}),
 	];
 
@@ -300,15 +305,20 @@ function getWebviewsConfig(mode, env) {
 		),
 		new ForkTsCheckerPlugin({
 			async: false,
-			eslint: {
-				enabled: true,
-				files: path.join(basePath, '**', '*.ts'),
-				options: { cache: true },
-			},
+			// eslint: {
+			// 	enabled: true,
+			// 	files: path.join(basePath, '**', '*.ts'),
+			// 	options: { cache: true },
+			// },
 			formatter: 'basic',
 			typescript: {
 				configFile: path.join(basePath, 'tsconfig.json'),
 			},
+		}),
+		new ESLintPlugin({
+			files: path.join(basePath, '**', '*.ts'),
+			// lintDirtyModulesOnly: true,
+			// threads: true,
 		}),
 		new MiniCssExtractPlugin({
 			filename: '[name].css',
