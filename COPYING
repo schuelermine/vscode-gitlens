@@ -1,0 +1,18 @@
+This repository, with the exception of its git revision history, is licenced under the MIT License.
+See the LICENSE file.
+Parts of the history and previous states are licenced under different licences.
+Read README.md, LICENSE and LICENCE.plus or LICENCE.premium
+at each older version to check the licensing during that time.
+This repository is a fork of https://github.com/gitkraken/vscode-gitlens.
+Its content excluding the parts licenced under the terms of
+the LICENSE.plus file there is redistributed here as has been permitted by the licence.
+Its version history is redistributed here under the rights granted by the GitHub Terms of Service,
+Section D.5. It is assumed in good faith that GitKraken, Eric Amodio, and previous GitLens contributors,
+have legal relationships with GitHub similar to the GitHub Terms of Service that
+grant others the licence to duplicate their content via
+GitHub’s platform-internal tools, such as forks.
+
+If you want to redistribute this repository from GitHub,
+and want to do so under the terms of the MIT License (the content of the LICENSE file),
+you should remove the content in the .git folder to erase
+all version history that might be licenced differently.

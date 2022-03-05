@@ -67,36 +67,6 @@ Here are just some of the **features** that GitLens provides,
 - user-defined [**modes**](#modes- 'Jump to Modes') for quickly toggling between sets of settings
 - and so much more 😁
 
-# Introducing GitLens+ [#](#introducing-gitlens+-features- 'GitLens+ features')
-
-GitLens+ adds all-new, completely optional, features that enhance your current GitLens experience when you sign in with a free account. A free GitLens+ account gives you access to these new GitLens+ features on public repos, while a paid account allows you to use them on private repos. Learn more about [ GitLens+ features](https://gitkraken.com/gitlens/plus-features).
-
-🛈 All other GitLens features are always accessible, without an account, and will continue to evolve and be invested in.
-
-## Does this affect existing features?
-
-No, the introduction of GitLens+ has no impact on existing GitLens features, so you won't lose access to any of the GitLens features you know and love. In fact, we are heavily investing in enhancing and expanding the GitLens feature set. Creating an account simply gives you access to a subset of new features that will enable you to get even more out of Git in VS Code!
-
-## Visual File History view [#](#visual-file-history-view- 'Visual File History view')
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/gitkraken/vscode-gitlens/main/images/docs/visual-file-history-hover.png" alt="Visual File History view" />
-</p>
-
-The Visual File History view allows you to quickly see the evolution of a file, including when changes were made, how large they were, and who made them.
-
-Authors who have contributed changes to the file are on the left y-axis to create a swim-lane of their commits over time (the x-axis). Commit are plotted as color-coded (per-author) bubbles, whose size represents the relative magnitude of the changes.
-
-Additionally, each commit's additions and deletions are visualized as color-coded, stacked, vertical bars, whose height represents the number of affected lines (right y-axis). Added lines are shown in green, while deleted lines are red.
-
-## Worktrees view [#](#worktrees-view- 'Worktrees view')
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/gitkraken/vscode-gitlens/main/images/docs/worktrees-view.png" alt="Worktrees view" />
-</p>
-
-Worktrees allow you to easily work on different branches of a repository simultaneously. You can create multiple working trees, each of which can be opened in individual windows or all together in a single workspace.
-
 # Features
 
 ## Revision Navigation [#](#revision-navigation- 'Revision Navigation')
@@ -1181,8 +1151,21 @@ And of course the awesome [vscode](https://github.com/Microsoft/vscode/graphs/co
 
 # License
 
-This repository contains both OSS-licensed and non-OSS-licensed files.
+This repository, with the exception of its git revision history, is licenced under the MIT License.
+See the LICENSE file.
+Parts of the history and previous states are licenced under different licences.
+Read README.md, LICENSE and LICENCE.plus or LICENCE.premium
+at each older version to check the licensing during that time.
+This repository is a fork of https://github.com/gitkraken/vscode-gitlens.
+Its content excluding the parts licenced under the terms of
+the LICENSE.plus file there is redistributed here as has been permitted by the licence.
+Its version history is redistributed here under the rights granted by the GitHub Terms of Service,
+Section D.5. It is assumed in good faith that GitKraken, Eric Amodio, and previous GitLens contributors,
+have legal relationships with GitHub similar to the GitHub Terms of Service that
+grant others the licence to duplicate their content via
+GitHub’s platform-internal tools, such as forks.
 
-All files in or under any directory named "plus" fall under LICENSE.plus.
-
-The remaining files fall under the MIT license.
+If you want to redistribute this repository from GitHub,
+and want to do so under the terms of the MIT License (the content of the LICENSE file),
+you should remove the content in the .git folder to erase
+all version history that might be licenced differently.
