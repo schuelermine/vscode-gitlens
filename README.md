@@ -1154,7 +1154,7 @@ And of course the awesome [vscode](https://github.com/Microsoft/vscode/graphs/co
 This repository, with the exception of its git revision history, is licenced under the MIT License.
 See the LICENSE file.
 Parts of the history and previous states are licenced under different licences.
-Read README.md, LICENSE and LICENCE.plus or LICENCE.premium
+Read README.md, LICENSE and LICENSE.plus or LICENSE.premium
 at each older version to check the licensing during that time.
 This repository is a fork of https://github.com/gitkraken/vscode-gitlens.
 Its content excluding the parts licenced under the terms of
